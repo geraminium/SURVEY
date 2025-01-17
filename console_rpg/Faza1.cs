@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace console_rpg
+namespace survey_game
 {
     internal class Faza1
     {
@@ -20,7 +21,7 @@ namespace console_rpg
             Console.Clear();
             for (int i = 0; i < (questions.Count - 1); i++)
             {
-                Task.Delay(2000).Wait();;
+                Task.Delay(2000).Wait();
                 Console.WriteLine("\n" + questions[i]);
                 var check = Tech.KeyCheckResponse(Console.ReadKey().Key);
                 if (!check)
@@ -30,7 +31,10 @@ namespace console_rpg
                 }
                 Console.Clear();
             }
-            Console.WriteLine();
+            Task.Delay(1000).Wait();
+            Console.WriteLine(questions.Last());
+            Task.Delay(2500).Wait();
+            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
     }
 }

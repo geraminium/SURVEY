@@ -1,0 +1,7 @@
+C:\Users\danyj\Source\Repos\SURVEY\console_rpg\obj\Debug\survey_game.csproj.AssemblyReference.cache
+C:\Users\danyj\Source\Repos\SURVEY\console_rpg\obj\Debug\survey_game.csproj.CoreCompileInputs.cache
+C:\Users\danyj\Source\Repos\SURVEY\console_rpg\obj\Debug\console_rpg.exe
+C:\Users\danyj\Source\Repos\SURVEY\console_rpg\obj\Debug\console_rpg.pdb
+C:\Users\danyj\Source\Repos\SURVEY\console_rpg\bin\Debug\console_rpg.exe.config
+C:\Users\danyj\Source\Repos\SURVEY\console_rpg\bin\Debug\console_rpg.exe
+C:\Users\danyj\Source\Repos\SURVEY\console_rpg\bin\Debug\console_rpg.pdb

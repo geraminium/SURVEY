@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
 
-namespace console_rpg
+
+
+namespace survey_game
 {
     internal class Tech
     {
+        static HttpListener _httpListener = new HttpListener();
 
         public static string commandPrompt = $"{Environment.UserName}@{Environment.MachineName}:~$  ";
         public static List<ConsoleKey> answers = new List<ConsoleKey> { ConsoleKey.Y, ConsoleKey.N };
@@ -61,6 +67,26 @@ namespace console_rpg
                 Console.WriteLine("\nPlease answer the questions in the form suggested by the administrator...");
                 return false;
             }
+        }
+
+        private static void ResponseThread()
+        {
+            while (true)
+            {
+                HttpListenerContext context = _httpListener.GetContext();
+                byte[] _responseArray = Encoding.UTF8.GetBytes("<html><head><title>Localhost server -- port 5000</title></head>" +
+                "<body>Welcome to the <strong>Localhost server</strong> -- <em>port 5000!</em></body></html>");
+                context.Response.OutputStream.Write(_responseArray, 0, _responseArray.Length);
+                context.Response.KeepAlive = false;
+                context.Response.Close();
+            }
+        }
+        public static void Server()
+        {
+            _httpListener.Prefixes.Add("http://127.0.0.1/");
+            _httpListener.Start();
+            Thread _responseThread = new Thread(ResponseThread);
+            _responseThread.Start();
         }
     }
 }
