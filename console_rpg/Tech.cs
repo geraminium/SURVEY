@@ -4,18 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
-
-
+using Microsoft.Win32;
 
 namespace survey_game
 {
     internal class Tech
     {
-        static HttpListener listener = new HttpListener();
-        static HttpListenerContext context = listener.GetContext();
-        protected static HttpListenerRequest request = context.Request;
-        protected static HttpListenerResponse response = context.Response;
-
         public static string commandPrompt = $"{Environment.UserName}@{Environment.MachineName}:~$  ";
         public static List<ConsoleKey> answers = new List<ConsoleKey> { ConsoleKey.Y, ConsoleKey.N };
 
@@ -35,6 +29,7 @@ namespace survey_game
             "!!!!!!! DON'T LIE YOU COWARD !!!!!!!",
 
         };
+
         public static bool KeyCheckResponse(ConsoleKey key, bool drama = false)
         {
             if (answers.Contains(key))
@@ -70,17 +65,36 @@ namespace survey_game
             }
         }
 
-        public static void ServerStart()
+        public static string getDefaultBrowser()
         {
-            listener.Prefixes.Add("http://127.0.0.1/");
-            listener.Start();
-        }
-        public static void ServerUpdate(string bufferInput) { 
-            byte[] buffer = Encoding.UTF8.GetBytes(bufferInput);
-            response.ContentLength64 = buffer.Length;
-            System.IO.Stream output = response.OutputStream;
-            output.Write(buffer, 0, buffer.Length);
-            output.Close();
+            using (RegistryKey userChoiceKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice"))
+            {
+                if (userChoiceKey != null)
+                {
+                    object progIdValue = userChoiceKey.GetValue("Progid");
+                    if (progIdValue != null)
+                    {
+                        if (progIdValue.ToString().ToLower().Contains("chrome"))
+                            return "chrome.exe";
+                        else if (progIdValue.ToString().ToLower().Contains("firefox"))
+                            return "firefox.exe";
+                        else if (progIdValue.ToString().ToLower().Contains("safari"))
+                            return "safari.exe";
+                        else if (progIdValue.ToString().ToLower().Contains("opera"))
+                            return "opera.exe";
+                        else
+                            return null;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
     }
 }

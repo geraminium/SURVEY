@@ -7,35 +7,43 @@ using System.Threading.Tasks;
 
 namespace survey_game
 {
-    internal class Faza1
+    internal class Phase1
     {
         List<string> questions = new List<string> {
-            "Did you have a good day? Y/N",
-            "Do you have many responsibilities? Y/N",
-            "Do you have any pets? Y/N",
-            "Have you ever commited a crime? Y/N",
-            "Do you know the location of the bodies? Y/N"
+            "Did you have a good day?",
+            "Do you have many responsibilities?",
+            "Do you have any pets?",
+            "Have you ever commited a crime?",
+            "Where is the body?"
         };
+
         public void Start()
         {
             Console.Clear();
             for (int i = 0; i < (questions.Count - 1); i++)
             {
                 Task.Delay(2000).Wait();
-                Console.WriteLine("\n" + questions[i]);
+                Console.Write("\n");
+                foreach (char j in questions[i])
+                {
+                    Console.Write(j);
+                    Task.Delay(25).Wait();
+                }
+                Console.Write(" [Y/N]\n");
                 var check = Tech.KeyCheckResponse(Console.ReadKey().Key);
                 if (!check)
                 {
                     i--;
-                    Task.Delay(4500).Wait();
+                    Task.Delay(3000).Wait();
                 }
                 Console.Clear();
             }
-            Task.Delay(1000).Wait();
+            Task.Delay(2000).Wait();
+
             Console.WriteLine(questions.Last());
             Task.Delay(2500).Wait();
-            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            //Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            Task.Delay(100);
         }
     }
 }
-

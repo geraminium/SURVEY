@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using console_rpg;
 
 namespace survey_game
 {
@@ -9,11 +11,14 @@ namespace survey_game
     {
         static void Main(string[] args)
         {
-            Faza1 faza1 = new Faza1();
-            Tech.ServerStart();
+            Phase1 phase1 = new Phase1();
+            Phase2 phase2 = new Phase2();
+            Phase3 phase3 = new Phase3();
+
             Console.WriteLine(" ░▒▓███████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ \r\n░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \r\n░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \r\n ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░ ░▒▓█▓▒▒▓█▓▒░░▒▓██████▓▒░  ░▒▓██████▓▒░  \r\n       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░         ░▒▓█▓▒░     \r\n       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░         ░▒▓█▓▒░     \r\n░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░  ░▒▓██▓▒░  ░▒▓████████▓▒░  ░▒▓█▓▒░     \r\nPress [Enter] to continue...");
             while (Console.ReadKey().Key != ConsoleKey.Enter) { }
             Console.Clear();
+
             char[] loadingChar = {'|', '/', '-', '\\'};
             for (int i = 0; i < 6; i++)
             {
@@ -24,8 +29,10 @@ namespace survey_game
                     Task.Delay(100).Wait();
                 }
             }
-            faza1.Start();
+
+            //phase1.Start();
+            //phase2.Start();
+            //phase3.Start();
         }
     }
 }
-
