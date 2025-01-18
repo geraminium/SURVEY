@@ -12,6 +12,9 @@ namespace survey_game
     internal class Tech
     {
         static HttpListener listener = new HttpListener();
+        static HttpListenerContext context = listener.GetContext();
+        protected static HttpListenerRequest request = context.Request;
+        protected static HttpListenerResponse response = context.Response;
 
         public static string commandPrompt = $"{Environment.UserName}@{Environment.MachineName}:~$  ";
         public static List<ConsoleKey> answers = new List<ConsoleKey> { ConsoleKey.Y, ConsoleKey.N };
@@ -67,21 +70,17 @@ namespace survey_game
             }
         }
 
-        public static void Server()
+        public static void ServerStart()
         {
             listener.Prefixes.Add("http://127.0.0.1/");
             listener.Start();
-            while (true)
-            {
-                HttpListenerContext context = listener.GetContext();
-                HttpListenerRequest request = context.Request;
-                HttpListenerResponse response = context.Response;
-                byte[] buffer = Encoding.UTF8.GetBytes("<html><head><title>늪腩󷳍T̑ܮʋ󢉅׌9ȋő:ݬ񙽭v</title></head><body>youre trapped</body></html>");
-                response.ContentLength64 = buffer.Length;
-                System.IO.Stream output = response.OutputStream;
-                output.Write(buffer, 0, buffer.Length);
-                output.Close();
-            }
+        }
+        public static void ServerUpdate(string bufferInput) { 
+            byte[] buffer = Encoding.UTF8.GetBytes(bufferInput);
+            response.ContentLength64 = buffer.Length;
+            System.IO.Stream output = response.OutputStream;
+            output.Write(buffer, 0, buffer.Length);
+            output.Close();
         }
     }
 }
