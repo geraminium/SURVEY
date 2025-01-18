@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading;
 using System.Net;
-using System.Security.Cryptography.X509Certificates;
 
 
 
@@ -13,7 +11,7 @@ namespace survey_game
 {
     internal class Tech
     {
-        static HttpListener _httpListener = new HttpListener();
+        static HttpListener listener = new HttpListener();
 
         public static string commandPrompt = $"{Environment.UserName}@{Environment.MachineName}:~$  ";
         public static List<ConsoleKey> answers = new List<ConsoleKey> { ConsoleKey.Y, ConsoleKey.N };
@@ -69,24 +67,21 @@ namespace survey_game
             }
         }
 
-        private static void ResponseThread()
-        {
-            while (true)
-            {
-                HttpListenerContext context = _httpListener.GetContext();
-                byte[] _responseArray = Encoding.UTF8.GetBytes("<html><head><title>Localhost server -- port 5000</title></head>" +
-                "<body>Welcome to the <strong>Localhost server</strong> -- <em>port 5000!</em></body></html>");
-                context.Response.OutputStream.Write(_responseArray, 0, _responseArray.Length);
-                context.Response.KeepAlive = false;
-                context.Response.Close();
-            }
-        }
         public static void Server()
         {
-            _httpListener.Prefixes.Add("http://127.0.0.1/");
-            _httpListener.Start();
-            Thread _responseThread = new Thread(ResponseThread);
-            _responseThread.Start();
+            listener.Prefixes.Add("http://127.0.0.1/");
+            listener.Start();
+            while (true)
+            {
+                HttpListenerContext context = listener.GetContext();
+                HttpListenerRequest request = context.Request;
+                HttpListenerResponse response = context.Response;
+                byte[] buffer = Encoding.UTF8.GetBytes("<html><head><title>늪腩󷳍T̑ܮʋ󢉅׌9ȋő:ݬ񙽭v</title></head><body>youre trapped</body></html>");
+                response.ContentLength64 = buffer.Length;
+                System.IO.Stream output = response.OutputStream;
+                output.Write(buffer, 0, buffer.Length);
+                output.Close();
+            }
         }
     }
 }
