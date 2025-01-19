@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\danyj\\source\\repos\\SURVEY\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|c:\\users\\danyj\\source\\repos\\survey\\console_rpg\\phase3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\phase3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\phase3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\tech.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\tech.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\phase1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\phase1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|c:\\users\\danyj\\source\\repos\\survey\\console_rpg\\phase2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\phase2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|c:\\users\\danyj\\source\\repos\\survey\\console_rpg\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\survey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\tech.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\tech.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\phase2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D493AA56-3D1D-4776-BB18-5A88E8BB5ACD}|console_rpg\\survey_game.csproj|solutionrelative:console_rpg\\phase2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,33 +40,33 @@
               "RelativeDocumentMoniker": "console_rpg\\Phase3.cs",
               "ToolTip": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Phase3.cs",
               "RelativeToolTip": "console_rpg\\Phase3.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCwAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T20:21:36.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Survey.cs",
               "DocumentMoniker": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Survey.cs",
               "RelativeDocumentMoniker": "console_rpg\\Survey.cs",
               "ToolTip": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Survey.cs",
               "RelativeToolTip": "console_rpg\\Survey.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T17:00:12.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Phase2.cs",
               "DocumentMoniker": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Phase2.cs",
               "RelativeDocumentMoniker": "console_rpg\\Phase2.cs",
               "ToolTip": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Phase2.cs",
               "RelativeToolTip": "console_rpg\\Phase2.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwEEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T16:39:05.907Z",
               "EditorCaption": ""
@@ -79,20 +79,20 @@
               "RelativeDocumentMoniker": "console_rpg\\Phase1.cs",
               "ToolTip": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Phase1.cs",
               "RelativeToolTip": "console_rpg\\Phase1.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCQAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T16:39:05.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Tech.cs",
               "DocumentMoniker": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Tech.cs",
               "RelativeDocumentMoniker": "console_rpg\\Tech.cs",
               "ToolTip": "C:\\Users\\danyj\\source\\repos\\SURVEY\\console_rpg\\Tech.cs",
               "RelativeToolTip": "console_rpg\\Tech.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAArwGsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-16T21:40:23.411Z",
               "EditorCaption": ""

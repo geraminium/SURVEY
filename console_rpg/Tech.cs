@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using Microsoft.Win32;
+using System.Runtime.InteropServices;
 
 namespace survey_game
 {
@@ -12,6 +13,12 @@ namespace survey_game
     {
         public static string commandPrompt = $"{Environment.UserName}@{Environment.MachineName}:~$  ";
         public static List<ConsoleKey> answers = new List<ConsoleKey> { ConsoleKey.Y, ConsoleKey.N };
+        public const int SPI_SETDESKWALLPAPER = 20;
+        public const int SPIF_UPDATEINFILE = 1;
+        public const int SPIF_SENDCHANGE = 2;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
 
         public static List<string> dramaResponseY = new List<string>
         {
@@ -75,15 +82,25 @@ namespace survey_game
                     if (progIdValue != null)
                     {
                         if (progIdValue.ToString().ToLower().Contains("chrome"))
+                        {
                             return "chrome.exe";
+                        }
                         else if (progIdValue.ToString().ToLower().Contains("firefox"))
+                        {
                             return "firefox.exe";
+                        }
                         else if (progIdValue.ToString().ToLower().Contains("safari"))
+                        {
                             return "safari.exe";
+                        }
                         else if (progIdValue.ToString().ToLower().Contains("opera"))
+                        {
                             return "opera.exe";
+                        }
                         else
+                        {
                             return null;
+                        }
                     }
                     else
                     {
@@ -95,6 +112,11 @@ namespace survey_game
                     return null;
                 }
             }
+        }
+        public static void ChangeWallpaper()
+        {
+            string imgPath = Environment.CurrentDirectory + @"\murder_site.jpg";
+            SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, imgPath, SPIF_UPDATEINFILE | SPIF_SENDCHANGE);
         }
     }
 }

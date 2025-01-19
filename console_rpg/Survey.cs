@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using console_rpg;
 
 namespace survey_game
 {
@@ -32,7 +31,7 @@ namespace survey_game
 
             //phase1.Start();
             //phase2.Start();
-            //phase3.Start();
+            phase3.Start();
         }
     }
 }
