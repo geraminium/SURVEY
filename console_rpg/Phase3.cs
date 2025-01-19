@@ -26,6 +26,7 @@ namespace survey_game
             Console.Clear();
             for (int i = 0; i < (questions.Count() - 1); i++)
             {
+                Task.Delay(2000).Wait();
                 Console.Write("\n");
                 foreach (char j in questions[i])
                 {
@@ -75,7 +76,7 @@ namespace survey_game
                 Task.Delay(25).Wait();
             }
             Tech.ChangeWallpaper();
-            //Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
             Process[] processes = Process.GetProcesses();
             
             foreach (var process in processes)

@@ -78,22 +78,22 @@ namespace survey_game
             {
                 if (userChoiceKey != null)
                 {
-                    object progIdValue = userChoiceKey.GetValue("Progid");
+                    string progIdValue = userChoiceKey.GetValue("Progid").ToString().ToLower();
                     if (progIdValue != null)
                     {
-                        if (progIdValue.ToString().ToLower().Contains("chrome"))
+                        if (progIdValue.Contains("chrome"))
                         {
                             return "chrome.exe";
                         }
-                        else if (progIdValue.ToString().ToLower().Contains("firefox"))
+                        else if (progIdValue.Contains("firefox"))
                         {
                             return "firefox.exe";
                         }
-                        else if (progIdValue.ToString().ToLower().Contains("safari"))
+                        else if (progIdValue.Contains("safari"))
                         {
                             return "safari.exe";
                         }
-                        else if (progIdValue.ToString().ToLower().Contains("opera"))
+                        else if (progIdValue.Contains("opera"))
                         {
                             return "opera.exe";
                         }
