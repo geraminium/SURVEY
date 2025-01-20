@@ -10,6 +10,7 @@ namespace console_rpg
     {
         public static void Roll()
         {
+
             List<string> monologue = new List<string>()
             {
                 "Now...",
@@ -24,6 +25,8 @@ namespace console_rpg
             };
             String credits = "Director: Tomáš Koštial \n Assistent director: Šarlota Gallovičová \n Graphic designer: Teodor Šutara \n Programers: Tomáš Koštial, Teodor Šutara, Šarlota Gallovičová";
             
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             
             for (int i = 0; i < monologue.Count; i++)
@@ -43,8 +46,7 @@ namespace console_rpg
                     Task.Delay(2500).Wait();
                 }
             }
-
-            Console.WriteLine("\n\n\n" + credits);
+            Console.Write("\n\n\n" + credits);
         }
     }
 }

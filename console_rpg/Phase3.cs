@@ -51,7 +51,6 @@ namespace survey_game
             }
 
             Task.Delay(2000).Wait();
-            Console.WriteLine(questions.Last());
             for (int i = questions.Count - 1; i < (questions.Count()); i++)
             {
                 Task.Delay(2000).Wait();

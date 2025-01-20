@@ -12,3 +12,10 @@ C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\survey_game.cspr
 C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\survey_game.csproj.CoreCompileInputs.cache
 C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\console_rpg.exe
 C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\console_rpg.pdb
+C:\Users\Tomáš\source\repos\SURVEY\console_rpg\bin\Debug\console_rpg.exe.config
+C:\Users\Tomáš\source\repos\SURVEY\console_rpg\bin\Debug\console_rpg.exe
+C:\Users\Tomáš\source\repos\SURVEY\console_rpg\bin\Debug\console_rpg.pdb
+C:\Users\Tomáš\source\repos\SURVEY\console_rpg\obj\Debug\survey_game.csproj.AssemblyReference.cache
+C:\Users\Tomáš\source\repos\SURVEY\console_rpg\obj\Debug\survey_game.csproj.CoreCompileInputs.cache
+C:\Users\Tomáš\source\repos\SURVEY\console_rpg\obj\Debug\console_rpg.exe
+C:\Users\Tomáš\source\repos\SURVEY\console_rpg\obj\Debug\console_rpg.pdb
