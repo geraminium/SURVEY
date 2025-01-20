@@ -1,6 +1,7 @@
 ﻿using survey_game;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,13 +41,15 @@ namespace console_rpg
                 if (!checkLocal)
                 {
                     i--;
-                    Task.Delay(4500).Wait();
+                    Task.Delay(3000).Wait();
                 }
                 Console.Clear();
             }
 
-            int counter = 0;
 
+            int counter = 0;
+            Task.Delay(2000).Wait();
+            Console.WriteLine("\n");
             foreach (char i in questions[4])
             {
                 if (counter < 14)
@@ -62,6 +65,48 @@ namespace console_rpg
                     Task.Delay(25).Wait();
                 }
             }
+            Console.Write(" [Y/N]");
+            ConsoleKey check = Console.ReadKey().Key;
+            Console.Clear();
+
+            for (int i = 5; i < (questions.Count() - 1); i++)
+            {
+                Task.Delay(2000).Wait();
+                Console.WriteLine("\n");
+                if (i > 5)
+                {
+                    Console.BackgroundColor = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    foreach (char j in questions[i])
+                    {
+                        Console.Write(j);
+                        Task.Delay(40 + i).Wait();
+                    }
+                }
+                else
+                {
+                    foreach (char j in questions[i])
+                    {
+                        Console.Write(j);
+                        Task.Delay(25).Wait();
+                    }
+                }
+                Console.Write(" [Y/N]");
+                ConsoleKey check2internal = Console.ReadKey().Key;
+                Console.Clear();
+            }
+            foreach (char i in questions.Last())
+            {
+                Console.Write(i);
+                Task.Delay(10).Wait();
+            }
+            Task.Delay(1000).Wait();
+            for (int i = 0; i < 100; i++)
+            {
+                Console.Write("░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ \r\n░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ \r\n░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ \r\n░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░░▒▓██████▓▒░  \r\n░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░     \r\n░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░     \r\n ░▒▓█████████████▓▒░░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░     \r\n\n");
+                Task.Delay(250);
+            }
+            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
     }
 }

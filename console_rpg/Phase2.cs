@@ -18,7 +18,7 @@ namespace survey_game
             "Do you like ice cream?",
             "Are you comfortable in your own room?",
             "Do you feel safe?",
-            "Do you know the person in this picture? [Y/N]"
+            "Do you know the person in this picture?"
         };
 
         public void Start()
@@ -38,19 +38,33 @@ namespace survey_game
                 if (!checkLocal)
                 {
                     i--;
-                    Task.Delay(4500).Wait();
+                    Task.Delay(3000).Wait();
                 }
                 Console.Clear();
             }
 
-            Process explorer = new Process();
-            explorer.StartInfo.FileName = Tech.getDefaultBrowser();
-            explorer.StartInfo.Arguments = Environment.CurrentDirectory + "\\victim_report_site\\phase2_person.html";
-            explorer.Start();
+            bool siteOpen = false;
 
-            Console.WriteLine(questions.Last());
-            for (int i = questions.Count; i <= (questions.Count()); i++)
+            for (int i = questions.Count - 1; i < (questions.Count()); i++)
             {
+                Task.Delay(2000).Wait();
+                Console.Write("\n");
+                foreach (char j in questions[i])
+                {
+                    Console.Write(j);
+                    Task.Delay(25).Wait();
+                }
+                Console.Write(" [Y/N]");
+
+                if (!siteOpen)
+                {
+                    Process explorer = new Process();
+                    explorer.StartInfo.FileName = Tech.getDefaultBrowser();
+                    explorer.StartInfo.Arguments = Environment.CurrentDirectory + "\\victim_report_site\\phase2_person.html";
+                    explorer.Start();
+                    siteOpen = true;
+                }
+
                 var checkLast = Tech.KeyCheckResponse(Console.ReadKey().Key);
                 if (!checkLast)
                 {
@@ -60,7 +74,7 @@ namespace survey_game
                 Console.Clear();
             }
             Console.Clear();
-            //Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
         }
     }
 }

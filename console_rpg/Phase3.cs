@@ -40,7 +40,7 @@ namespace survey_game
                 if (!checkLocal)
                 {
                     i--;
-                    Task.Delay(4500).Wait();
+                    Task.Delay(3000).Wait();
                 }
                 else if (i == 3 && answer == ConsoleKey.N)
                 {
@@ -52,16 +52,26 @@ namespace survey_game
 
             Task.Delay(2000).Wait();
             Console.WriteLine(questions.Last());
-            for (int i = questions.Count; i <= (questions.Count()); i++)
+            for (int i = questions.Count - 1; i < (questions.Count()); i++)
             {
+                Task.Delay(2000).Wait();
+                Console.Write("\n");
+                foreach (char j in questions[i])
+                {
+                    Console.Write(j);
+                    Task.Delay(25).Wait();
+                }
+                Console.Write(" [Y/N]");
+
                 var checkLast = Tech.KeyCheckResponse(Console.ReadKey().Key, true);
                 if (!checkLast)
                 {
                     i--;
-                    Task.Delay(4500).Wait();
+                    Task.Delay(3000).Wait();
                 }
                 Console.Clear();
             }
+
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine("`YMM'   `MM' .g8\"\"8q. `7MMF'   `7MF'          db      `7MN.   `7MF'`7MMF'`7MMM.     ,MMF'      db      `7MMF'      \r\n  VMA   ,V .dP'    `YM. MM       M           ;MM:       MMN.    M    MM    MMMb    dPMM       ;MM:       MM        \r\n   VMA ,V  dM'      `MM MM       M          ,V^MM.      M YMb   M    MM    M YM   ,M MM      ,V^MM.      MM        \r\n    VMMP   MM        MM MM       M         ,M  `MM      M  `MN. M    MM    M  Mb  M' MM     ,M  `MM      MM        \r\n     MM    MM.      ,MP MM       M         AbmmmqMA     M   `MM.M    MM    M  YM.P'  MM     AbmmmqMA     MM      , \r\n     MM    `Mb.    ,dP' YM.     ,M        A'     VML    M     YMM    MM    M  `YM'   MM    A'     VML    MM     ,M \r\n   .JMML.    `\"bmmd\"'    `bmmmmd\"'      .AMA.   .AMMA..JML.    YM  .JMML..JML. `'  .JMML..AMA.   .AMMA..JMMmmmmMMM");

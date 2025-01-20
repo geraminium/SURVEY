@@ -40,9 +40,9 @@ namespace survey_game
             }
             Task.Delay(2000).Wait();
 
-            Console.WriteLine(questions.Last());
+            Console.WriteLine("\n" + questions.Last());
             Task.Delay(2500).Wait();
-            //Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
+            Process.Start(@"C:\WINDOWS\system32\rundll32.exe", "user32.dll,LockWorkStation");
             Task.Delay(100);
         }
     }

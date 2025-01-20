@@ -17,26 +17,30 @@ namespace survey_game
             Phase4 phase4 = new Phase4();
 
             Console.Title = "SURVEY";
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WindowWidth = 150;
+            Console.WindowHeight = 50;
 
             Console.WriteLine(" ░▒▓███████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ \r\n░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \r\n░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ \r\n ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░ ░▒▓█▓▒▒▓█▓▒░░▒▓██████▓▒░  ░▒▓██████▓▒░  \r\n       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░         ░▒▓█▓▒░     \r\n       ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░         ░▒▓█▓▒░     \r\n░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░  ░▒▓██▓▒░  ░▒▓████████▓▒░  ░▒▓█▓▒░     \r\nPress [Enter] to continue...");
             while (Console.ReadKey().Key != ConsoleKey.Enter) { }
             Console.Clear();
 
-            char[] loadingChar = {'|', '/', '-', '\\'};
+            char[] loadingChar = { '|', '/', '-', '\\' };
             for (int i = 0; i < 6; i++)
             {
                 foreach (char c in loadingChar)
                 {
-                    Console.Clear() ;
+                    Console.Clear();
                     Console.Write("\t" + c);
                     Task.Delay(100).Wait();
                 }
             }
 
-            //phase1.Start();
-            //phase2.Start();
-            //phase3.Start();
+            phase1.Start();
+            phase2.Start();
+            phase3.Start();
             phase4.Start();
+            Credits.Roll();
         }
     }
 }
