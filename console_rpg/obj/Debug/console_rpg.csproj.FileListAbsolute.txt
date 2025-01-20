@@ -1,0 +1,7 @@
+C:\Users\Tomáš\source\repos\console_rpg\console_rpg\bin\Debug\console_rpg.exe.config
+C:\Users\Tomáš\source\repos\console_rpg\console_rpg\bin\Debug\console_rpg.exe
+C:\Users\Tomáš\source\repos\console_rpg\console_rpg\bin\Debug\console_rpg.pdb
+C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\console_rpg.csproj.AssemblyReference.cache
+C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\console_rpg.csproj.CoreCompileInputs.cache
+C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\console_rpg.exe
+C:\Users\Tomáš\source\repos\console_rpg\console_rpg\obj\Debug\console_rpg.pdb
